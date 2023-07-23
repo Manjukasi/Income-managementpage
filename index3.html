@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio page</title>
+    <link rel="stylesheet" href="./index3.css"/>
+</head>
+<body>
+    <section class="third-section">
+        <a href="./index.html"><div class="cancel icon">X</div></a> 
+        <div class="header-peers">
+          <h4>How do i compare to my peers?</h4>
+          <p>These numbers represent current goal achievement.</p> 
+        </div>
+        <div class=" option section-font">
+            <div>
+                <label for="age">Age:</label>
+                <select id="age">
+                  <option>Under 30</option>
+                  <option>Under 40</option>
+                </select>                
+            </div>
+        </div>
+        <div class="section-font">
+            <div>
+                <label for="Salary">Salary:</label>
+                <select id="salary">
+                  <option>K 20 - K 30</option>
+                  <option>K 30 - K 40</option>
+                </select>                
+            </div>
+        </div>
+        <div class="section-font">
+            <div>
+                <label for="Gender">Gender:</label>
+                <select id="gender">
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>                
+            </div>
+        </div>
+        <div class="percentage-container">
+            <section class="circle-container">
+                <div class="progress-bar average">
+                    <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;"></progress>
+                    <span>78%</span>
+                  </div>
+                <h6>Average</h6>
+            </section>
+            <section class="circle-container">
+                <div class="progress-bar top">
+                    <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;"></progress>
+                    <span>95%</span>
+                  </div>
+                <h6>Top</h6>
+            </section>
+            <section class="circle-container">
+                <div class="progress-bar me">
+                    <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;"></progress>
+                    <span>59%</span>
+                  </div>
+                <h6>Me</h6>
+            </section>
+        </div>
+                        <div class="strategy">
+            <h4>Retirement Strategy</h4>
+            <div>
+                <h5>Employee Contribution</h5>
+                <div class="line-container">
+                    <span class=" employee line-pointer"></span>
+                        <progress value="60" min="0" max="100" class="scaler"></progress>
+                    <div id="percentage-label">12%</div>
+                </div>
+            </div>
+            <div>
+                <h5>Retirement Age</h5>
+                <div class="line-container">
+                    <span class=" age line-pointer"></span>
+                    <progress value="75" min="0" max="100" class="scaler"></progress>
+                    <div>65</div>
+                </div>
+            </div>
+            <div class="line-container">
+                <h5>Employer Contribution</h5>
+                <div class="percentage">8.4%</div>
+            </div>
+            <div class="line-container">
+                <h5>Interest Rate</h5>
+                <div class="percentage">5%</div>
+            </div>
+        </div>
+      </section>
+      <button class="update-btn">Update</button>
+   <script src="./app.js"></script>   
+</body>
+</html>

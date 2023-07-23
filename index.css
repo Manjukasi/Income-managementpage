@@ -1,0 +1,369 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  overflow-y: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+p {
+  color: grey;
+  padding: 0.5em 0;
+}
+.main-container {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+.active {
+  background-color: rgb(0, 76, 255);
+  padding: 0.5em;
+  color: white;
+  border-radius: 10px;
+}
+.profile-container {
+  display: flex;
+  margin-top: 1.5em;
+}
+
+.profile-container > img {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  margin-right: 1em;
+  margin-top: 0.5em;
+}
+.profile-name {
+  margin-top: 1em;
+  text-align: center;
+}
+.btn {
+  width: 100%;
+  background-color: blue;
+  border: 1px solid rgb(0, 76, 255);
+  padding: 1em;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1em;
+  margin-top: 1em;
+}
+.fixed-sidebar {
+  list-style: none;
+}
+.year {
+  font-size: 1.4em;
+  color: black;
+}
+.marker {
+  width: 0.5em;
+  height: 0.3em;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+.first {
+  background-color: blue;
+}
+.second {
+  background-color: rgba(0, 0, 255, 0.611);
+}
+.third {
+  background-color: skyblue;
+}
+.retirement > article > h5 {
+  color: blue;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Your CSS rules for  phones here */
+  .desktop {
+    display: none;
+  }
+  p {
+    font-size: 1em;
+  }
+  /* styles for nav bar */
+  .fixed-navbar {
+    position: fixed;
+    bottom: 0;
+    width: 95%;
+    background-color: white;
+    padding-bottom: 0.5em;
+    z-index: 0;
+  }
+  .fixed-sidebar {
+    padding-left: 0;
+    color: grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header {
+    margin: 1em 4em 0 0;
+    position: fixed;
+    right: 0;
+    top: 1em;
+    z-index: 0;
+  }
+  .fa-bell {
+    position: relative;
+  }
+  .alert-icon {
+    font-size: 0.5em;
+    position: absolute;
+    top: -0.7em;
+    color: skyblue;
+  }
+
+  /* styles of first section */
+  .first-section {
+    z-index: 0;
+    padding: 3em;
+    padding-bottom: 0;
+  }
+  .updates {
+    margin-top: 2.5em;
+  }
+  .account-balance > div {
+    font-size: 3em;
+  }
+  .account-balance > h4 {
+    font-size: 1.2em;
+  }
+  .interest,
+  .contributions {
+    display: flex;
+    margin-top: 1em;
+  }
+  .interest > article {
+    padding: 1em 2em 0.2em 0;
+  }
+  .interest > article > div {
+    font-size: 1.5em;
+  }
+  .history {
+    margin-top: 3em;
+  }
+  .history > h4 {
+    padding: 1em 0;
+  }
+  .history > article {
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.293);
+  }
+  .history > article > div {
+    color: grey;
+  }
+  .history > article > p {
+    color: black;
+    font-size: 0.9em;
+  }
+  /* styles for second section      */
+  .second-section {
+    padding: 3em;
+    margin-top: 0;
+    z-index: 0;
+  }
+  .goals,
+  .monthly > article {
+    border-bottom: 1px solid skyblue;
+  }
+  .goals > div {
+    font-size: 1.8em;
+  }
+  .account-balance,
+  .goals {
+    margin-top: 0;
+  }
+  .contribution-container {
+    margin-top: 2em;
+  }
+
+  .contributions > article > p,
+  .monthly p {
+    font-size: 0.8em;
+  }
+  .digits {
+    font-size: 1em;
+  }
+  .contributions {
+  display: flex;
+  justify-content: space-around;
+}
+}
+@media only screen and (min-width: 767px) {
+  .mobile {
+    display: none;
+  }
+  .main-container {
+    max-height: 100vh;
+    display: flex;
+  }
+  p {
+    font-size: 0.8em;
+  }
+
+  /* styles for nav sidebar */
+  .logo {
+    width: 4em;
+    height: 4em;
+  }
+  .sidebar {
+    margin-left: 0.5em;
+    max-width: 5%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .share-icon {
+    width: 1.5em;
+    height: 1.5em;
+    padding-left: 0.4em;
+  }
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    padding: 0 1.5em;
+  }
+
+  .fixed-sidebar li {
+    padding: 1em 0.5em;
+    font-size: 1em;
+  }
+  .shareicon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+  .header {
+    position: relative;
+    margin-bottom: 2em;
+  }
+  .alert-icon {
+    font-size: 0.5em;
+    position: absolute;
+    top: -10px;
+    color: skyblue;
+  }
+  /* 
+    styles for first-section */
+  .first-section {
+    max-width: 25%;
+    padding: 0 3em;
+  }
+  .updates {
+    margin-top: 2em;
+  }
+  .account-balance > p {
+    font-size: 0.8em;
+  }
+  .account-balance > div {
+    font-size: 1.5em;
+  }
+  .account-balance > h4 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+  .interest {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4em;
+  }
+  .interest > article {
+    margin-bottom: 0.5em;
+  }
+  .interest > article > div {
+    font-size: 0.9em;
+  }
+  .interest > article > p {
+    font-size: 0.8em;
+  }
+  .btn {
+    width: 70%;
+  }
+  .history {
+    margin-top: 0.8em;
+  }
+  .history > h4 {
+    padding: 1em 0;
+  }
+  .history > article {
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.293);
+  }
+  .history > article > div {
+    color: grey;
+    font-size: 0.8em;
+  }
+  .history > article > p {
+    color: black;
+    font-size: 0.7em;
+  }
+  /* styles for second section  */
+  .second-section {
+    max-width: 45%;
+    min-width: 45%;
+    padding: 3em;
+    margin-top: 0;
+  }
+  .monthly {
+    display: flex;
+    flex-direction: row;
+  }
+  .monthly > article {
+    border-bottom: 1px solid blue;
+    margin-left: 5em;
+  }
+  .monthly > article > div {
+    font-size: 1.5em;
+  }
+  .goals-container {
+    display: flex;
+  }
+  .goals {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
+  .goals > p {
+    font-size: 0.9em;
+  }
+  .contribution-container {
+    margin-top: 0.5em;
+  }
+  .contributions >article > p, .digits {
+    font-size: 0.9em;
+    padding: 0.3em;
+  }
+  .contributions {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.4em 0.3em
+  }
+  .contributions >article {
+    display: flex;
+    align-items: center;
+  }
+  .desktop > .header-peers > p {
+    font-size: 0.7em;
+  }
+  
+}

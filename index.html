@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio page</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./index3.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="sidebar desktop">
+        <div>
+          <div class="logo-container">
+            <img  class= "logo desktop" src="./images/logo.webp" alt="logo" />
+            <li class="nav-button desktop"><i class="fa-solid fa-magnifying-glass"></i></li>
+          </div>
+          <nav class="fixed-navbar">
+            <ul class="fixed-sidebar">
+              <li id="nav-button" class="home"><i class="fa-solid fa-house"></i></li>
+              <li id="nav-button"><i class="fa-solid fa-box"></i></li>
+              <li id="nav-button"><i class="fa-solid fa-list"></i></li>
+              <li id="nav-button"><i class="fa-solid fa-user"></i></li>
+            </ul>
+          </nav>    
+        </div>
+        <div class="shareicon-container">
+          <div class="header">
+            <i class="fa-regular fa-bell"></i>
+            <span><i class="fa-solid fa-circle alert-icon"></i></span>
+          </div> 
+          <div><img class="share-icon" src="./images/share.png" alt="shareIcon" /></div>   
+        </div>
+      </div>
+      <div class="header mobile">
+        <i class="fa-regular fa-bell"></i>
+        <span><i class="fa-solid fa-circle alert-icon"></i></span>
+      </div>
+      <div class="first-section">
+        <div class="profile-container">
+          <img src="./images/profile.png" alt="profile-image" />
+          <div class="profile-name">
+            <h2>Hi Mike,</h2>
+            <p>Welcome back.</p>
+          </div>
+        </div>
+        <section class="updates">
+          <article class="account-balance">
+            <h4>Today</h4>
+            <div>&#36;19,892</div>
+            <p>Account Balance</p>
+          </article>
+          <div class="interest">
+            <article>
+              <div>&#36;4,000</div>
+              <p>Year-to-Date <span class="desktop">Contributions</span></p>
+            </article>
+            <article>
+              <div>&#36;1,892</div>
+              <p>Total Interest</p>
+            </article>
+          </div>
+          <button class="btn">I want to    <span class="desktop"><i class="fa-solid fa-caret-down"></i></span></button>
+        </section>
+        <section class="transaction history">
+          <h4>Recent Transactions</h4>
+          <article>
+            <div>2020-08-07</div>
+            <p>Withdrawal Transfer to Bank-xxx11</p>
+          </article>
+          <article>
+            <div>2020-07-21</div>
+            <p>Withdrawal Transfer to Bank-xxx11</p>
+          </article>
+          <article>
+            <div>2020-07-16</div>
+            <p>Withdrawal Transfer to Bank-xxx11</p>
+          </article>
+        </section>
+      </div>
+      <nav class="fixed-navbar mobile">
+          <ul class="fixed-sidebar">
+            <li id="nav-button"><i class="fa-solid fa-house"></i></li>
+            <li id="nav-button"><i class="fa-solid fa-box"></i></li>
+            <li id="nav-button"><i class="fa-solid fa-list"></i></li>
+            <a href="./index3.html"><li id="nav-button" class="userIcon"><i class="fa-solid fa-user"></i></li></a>
+           <li id="nav-button"><i class="fa-solid fa-magnifying-glass"></i></li>
+          </ul>
+      </nav>  
+      <div class="second-section">
+        <section class="retirement">
+          <article>
+            <h5>Retirement Income</h5>
+            <p class="year">Starting Year 2056</p>
+          </article>
+        </section>
+        <section class="updates goals-container">
+          <article class="account-balance goals">
+            <div>&#36;300,000</div>
+            <p>My Goal</p>
+          </article>
+          <div class="interest monthly">
+            <article>
+              <div>59%</div>
+              <p>Goal Achieved</p>
+            </article>
+            <article class="est">
+              <div>K 300</div>
+              <p>Est. Monthly Income</p>
+            </article>
+          </div>
+        </section>
+        <section class="contribution-container">
+          <h4>Contributions Overtime</h4>
+          <div class="contributions">
+            <article>
+              <div class="marker first"></div>
+              <p>Employer</p>
+              <div class="digits">&#36;73,500</div>
+            </article>
+            <article>
+              <div class="marker second"></div>
+              <p>Employee</p>
+              <div class="digits">&#36;52,500</div>
+            </article>
+            <article>
+              <div class="marker third"></div>
+              <p>Total Interest</p>
+              <div class="digits">&#36;244,313</div>
+            </article>
+          </div>
+        </section>
+        <div style="max-width: 100%; max-height: 100%; margin-left: 0; margin-top: 1.5em; padding-bottom: 10px;"class="chart-container">
+          <canvas
+            id="myBarChart"
+            height="200"
+            class="chart"
+          ></canvas>
+        </div>
+        <div class="desktop">
+          <div class="header-peers">
+            <h4>How do i compare to my peers?</h4>
+            <p>These numbers represent current goal achievement.</p> 
+          </div>
+          <div class="data-container">
+            <div class=" option section-font">
+              <div>
+                  <label for="age">Age:</label>
+                  <select id="age">
+                    <option>Under 30</option>
+                    <option>Under 40</option>
+                  </select>                
+              </div>
+              <div class="section-font">
+                <div>
+                    <label for="Salary">Salary:</label>
+                    <select id="salary">
+                      <option>K 20 - K 30</option>
+                      <option>K 30 - K 40</option>
+                    </select>                
+                </div>
+            </div>
+            <div class="section-font">
+                <div>
+                    <label for="Gender">Gender:</label>
+                    <select id="gender">
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>                
+                </div>
+            </div>
+          </div>
+          <div class="percentage-container">
+              <section class="circle-container">
+                  <div class="progress-bar average">
+                      <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;"></progress>
+                      <span>78%</span>
+                    </div>
+                  <h6>Average</h6>
+              </section>
+              <section class="circle-container">
+                  <div class="progress-bar top">
+                      <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;"></progress>
+                      <span>95%</span>
+                    </div>
+                  <h6>Top</h6>
+              </section>
+              <section class="circle-container">
+                  <div class="progress-bar me">
+                      <progress value="75" min="0" max="100" style="visibility:hidden;height:0;width:0;"></progress>
+                      <span>59%</span>
+                    </div>
+                  <h6>Me</h6>
+              </section>
+          </div>
+        </div>
+         </div>
+      </div>
+     <section class="third-section desktop">
+        <!-- <a href="./index.html"><div class="cancel icon mobile">X</div></a>  -->
+         <div class="strategy">
+            <h4>Retirement Strategy</h4>
+            <div>
+                <h5>Employee Contribution</h5>
+                <div class="line-container">
+                    <span class=" employee line-pointer"></span>
+                        <progress value="60" min="0" max="100" class="scaler"></progress>
+                    <div id="percentage-label">12%</div>
+                </div>
+            </div>
+            <div>
+                <h5>Retirement Age</h5>
+                <div class="line-container">
+                    <span class=" age line-pointer"></span>
+                    <progress value="75" min="0" max="100" class="scaler"></progress>
+                    <div>65</div>
+                </div>
+            </div>
+            <div class="line-container">
+                <h5>Employer Contribution</h5>
+                <div class="percentage">8.4%</div>
+            </div>
+            <div class="line-container">
+                <h5>Interest Rate</h5>
+                <div class="percentage">5%</div>
+            </div>
+         </div>
+        <button class="update-btn">Update</button> 
+        <h5 class="help-btn">View Help Docs  <span> <i class="fa-solid fa-caret-right"></i></span></h5>
+        <div class="housing-plan">
+          <h6>Are you considering a</h6>
+          <h6>Housing Advance?</h6>
+          <p>Limited time reduced interest</p>
+          <div class="learn">Learn More  <span> <i class="fa-solid fa-caret-right"></i></span></div>
+        </div> 
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
